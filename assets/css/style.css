@@ -1,0 +1,104 @@
+@charset "UTF-8";
+#header {
+  display: flex;
+  justify-content: space-between;
+}
+#header .header-right {
+  margin-top: 8px;
+}
+#header h1 {
+  font-size: 45px;
+  font-weight: lighter;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(84, 69, 69);
+}
+#header .header-left {
+  display: flex;
+  margin-top: 8px;
+  position: relative;
+}
+#header .header-left .nav {
+  position: absolute;
+  bottom: -120%;
+  right: -220px;
+  width: 40%;
+  height: 50%;
+  transition: right 0.5s ease;
+}
+#header .header-left .menu {
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+}
+#header .header-left .menu li {
+  font-size: 15px;
+  font-weight: lighter;
+  color: rgb(86, 83, 83);
+}
+#header .header-left .menu li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 50px;
+}
+#header .header-left .menu li a i {
+  text-align: center;
+  margin-bottom: 5px;
+}
+#header .header-left .menu li a:hover {
+  opacity: 60%;
+}
+#header .header-left .hamburger {
+  width: 30px;
+  height: 30px;
+  margin: 20px auto;
+}
+#header .header-left .hamburger span::after,
+#header .header-left .hamburger span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9px;
+}
+#header .header-left .hamburger span::after {
+  top: 9px;
+}
+#header .header-left .hamburger span {
+  position: relative;
+  display: block;
+}
+#header .header-left .hamburger span,
+#header .header-left .hamburger span::after,
+#header .header-left .hamburger span::before {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(78, 67, 67);
+  transition: all 0.5s;
+  /*←アニメーション*/
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+#header .hamburger.on span {
+  background-color: transparent;
+}
+#header .hamburger.on span:before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#header .hamburger.on span:after {
+  transform: rotate(-45deg) translate(7px, -8px);
+}
+#header .hamburger.on + .nav {
+  right: 0;
+}
+
+.slide-items {
+  width: 70%;
+  height: 40%;
+  margin: 80px auto;
+}
+.slide-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10%;
+}/*# sourceMappingURL=style.css.map */
